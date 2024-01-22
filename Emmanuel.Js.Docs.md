@@ -88,32 +88,32 @@
         3. We can use Spread operator to render the data in the parent component ```App.jsx```
         ```jsx
             <section id="core-concept">
-            /*
-                one way of pasing the data in the parent component
-            */
-            <CoreConcept
-                image={img2}
-                title="Title1"
-                description="Description1"
-            />
-
-            /*
-                grabbing the second object from the array then display its properties. becuase Same properties repeat in the
-                 passing child componet we can use spread operato
-            */
-            <CoreConcept
-                image={CORE_CONCEPTS[2].image}
-                title={CORE_CONCEPTS[2].title}
-                description={CORE_CONCEPTS[2].description}
+                /*
+                    one way of pasing the data in the parent component
+                */
+                <CoreConcept
+                    image={img2}
+                    title="Title1"
+                    description="Description1"
                 />
 
                 /*
-                    Using Spread operator. This is possible because {image, title, description} are the same in the data.
-                    {...CORE_CONCEPTS[1]} grab the second object then display its properties
+                    grabbing the second object from the array then display its properties. becuase Same properties repeat in the
+                    passing child componet we can use spread operato
                 */
-            <CoreConcept
-                {...CORE_CONCEPTS[1]}
-            />
+                <CoreConcept
+                    image={CORE_CONCEPTS[2].image}
+                    title={CORE_CONCEPTS[2].title}
+                    description={CORE_CONCEPTS[2].description}
+                    />
+
+                    /*
+                        Using Spread operator. This is possible because {image, title, description} are the same in the data.
+                        {...CORE_CONCEPTS[1]} grab the second object then display its properties
+                    */
+                <CoreConcept
+                    {...CORE_CONCEPTS[1]}
+                />
             </section>
         ```
 
